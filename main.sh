@@ -7,8 +7,8 @@ setserver="true"
 syncweb="true"
 syncjars="true"
 #server name and motd -- DO NOT USE BACKTICKS (`) within it!! -- stuff WONT work if you DO!! ALSO do not use "${anything}" UNLESS YOU KNOW WHAT YOU ARE DOING!!
-srvname="Cracked SMP"
-srvmotd="Cracked SMP"
+srvname="Ghost Network"
+srvmotd="Going Ghost"
 
 
 #DANGER!! setting the following to "true" will redownload the bukkit server! only change if you know what you are doing!
