@@ -1,0 +1,113 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007fa2671db2ae, pid=1780, tid=0x00007fa250b18640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_302-b07) (build 1.8.0_302-b07)
+# Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.2.0 (25.302-b07-jvmci-21.2-b08 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x4a12ae]  CompileBroker::collect_statistics(CompilerThread*, elapsedTimer, CompileTask*)+0xce
+#
+# Core dump written. Default location: /home/runner/eaglecraft-server-1-backup/java/bungee_command/core or core.1780
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/oracle/graal/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fa260167800):  JavaThread "C1 CompilerThread1" daemon [_thread_in_vm, id=1806, stack(0x00007fa250919000,0x00007fa250b19000)]
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007fa266692268
+
+Registers:
+RAX=0x00007fa266692268, RBX=0x00007fa260167800, RCX=0x0000000000000000, RDX=0x0000000000000001
+RSP=0x00007fa250b17828, RBP=0x00007fa250b17920, RSI=0x0000000bae50d141, RDI=0x00007fa267e45560
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000000
+R12=0x00007fa2601666f0, R13=0x00007fa26019db80, R14=0x0000000000000001, R15=0x00007fa20017c7a8
+RIP=0x00007fa2671db2ae, EFLAGS=0x0000000000010216, CSGSFS=0x002b000000000033, ERR=0x0000000000000007
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fa250b17828)
+0x00007fa250b17828:   00007fa2671db27d 00007fa224540be0
+0x00007fa250b17838:   00007fa22454123e 00007fa224541360
+0x00007fa250b17848:   0000000000000558 00007fa200000003
+0x00007fa250b17858:   ffffffff51449b90 00007fa251449b90
+0x00007fa250b17868:   00007fa260009160 00007fa25106efa0
+0x00007fa250b17878:   00007fa20008ccd0 00007fa26001ef70
+0x00007fa250b17888:   0000000000000064 0000000000000000
+0x00007fa250b17898:   0000000000000064 00007ffe7fb9b82c
+0x00007fa250b178a8:   0000000000000001 00007fa26019db80
+0x00007fa250b178b8:   00007fa250b18640 00007fa250b178e0
+0x00007fa250b178c8:   00007fa2678ca506 00007fa250b17900
+0x00007fa250b178d8:   00007fa2678ca57b 00007fa250b17940
+0x00007fa250b178e8:   00007fa2670129a9 00007fa267e253e8
+0x00007fa250b178f8:   00007fa260167800 00007fa26019db80
+0x00007fa250b17908:   00007fa26001f3d0 00007fa250b17a30
+0x00007fa250b17918:   00007fa20017c7a8 00007fa250b17bf0
+0x00007fa250b17928:   00007fa2671e091f 0000000bae50d141
+0x00007fa250b17938:   00007fa250b17a20 0000000000000000
+0x00007fa250b17948:   00007fa2671e0568 00007fa250b17a60
+0x00007fa250b17958:   00000000000003d8 00007fa250b179e0
+0x00007fa250b17968:   00007fa267e47b80 00007fa26001eef0
+0x00007fa250b17978:   00007fa26001f298 0000000000000e5c
+0x00007fa250b17988:   00007fa250b17a60 00007fa26001ee70
+0x00007fa250b17998:   ffffffff00000558 00007fa26001eeb0
+0x00007fa250b179a8:   00007fa200000000 0000000000000003
+0x00007fa250b179b8:   00007fa250b17ab0 0000000000000000
+0x00007fa250b179c8:   0000000000000000 00007fa250b17a00
+0x00007fa250b179d8:   0000000100000000 0000000bae50d141
+0x00007fa250b179e8:   00007fa250b17a20 0000000000000000
+0x00007fa250b179f8:   0000000000000000 00007fa26827b9f0
+0x00007fa250b17a08:   00007fa250b17a20 0000000000007edb
+0x00007fa250b17a18:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007fa2671db2ae)
+0x00007fa2671db28e:   0f 84 0c 04 00 00 48 8b 05 6d a3 c6 00 48 8b 75
+0x00007fa2671db29e:   10 48 83 ec 08 48 8d 3d b6 a2 c6 00 48 8b 40 28
+0x00007fa2671db2ae:   48 01 30 ff 75 20 ff 75 18 ff 75 10 e8 11 71 6f
+0x00007fa2671db2be:   00 48 8d 7d 10 48 83 c4 20 e8 b4 71 6f 00 48 8b 
+
+Register to memory mapping:
+
+RAX=0x00007fa266692268 is an unknown value
+RBX=0x00007fa260167800 is a thread
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007fa250b17828 is pointing into the stack for thread: 0x00007fa260167800
+RBP=0x00007fa250b17920 is pointing into the stack for thread: 0x00007fa260167800
+RSI=0x0000000bae50d141 is an unknown value
+RDI=0x00007fa267e45560: <offset 0x110b560> in /nix/store/x26gyx3nb3kx580i4r9qg9q1iw45xbp9-graalvm8-ce/jre/lib/amd64/server/libjvm.so at 0x00007fa266d3a000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000000 is an unknown value
+R12=0x00007fa2601666f0 is an unknown value
+R13=0x00007fa26019db80 is an unknown value
+R14=0x0000000000000001 is an unknown value
+R15={method} {0x00007fa20017c7a8} 'maybeReloadBans' '(Lnet/md_5/bungee/api/CommandSender;)V' in 'net/md_5/bungee/eaglercraft/BanList'
+
+
+Stack: [0x00007fa250919000,0x00007fa250b19000],  sp=0x00007fa250b17828,  free space=2042k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x4a12ae]  CompileBroker::collect_statistics(CompilerThread*, elapsedTimer, CompileTask*)+0xce
+V  [libjvm.so+0x4a691f]  CompileBroker::invoke_compiler_on_method(CompileTask*)+0xdcf
+V  [libjvm.so+0x4a8968]  CompileBroker::compiler_thread_loop()+0x5c8
+V  [libjvm.so+0xb8613b]  JavaThread::thread_main_inner()+0xdb
+V  [libjvm.so+0xb86409]  JavaThread::run()+0x299
+V  [libjvm.so+0xa13d02]  java_start(Thread*)+0x102
+C  [libpthread.so.0+0x8d3e]  start_thread+0xce
+
+
+Current CompileTask:
+C1: 825613 1368   !   3       net.md_5.bungee.eaglercraft.BanList::maybeReloadBans (1002 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fa260463800 JavaThread "Netty IO Thread #0" [_thread_in_native, id=1852, stack(0x00007fa1f16ff000,0x00007fa1f1800000)]
+  0x00007fa1ec03b800 JavaThread "WebSocketWorker-25" [_thread_blocked, id=1851, stack(0x00007fa1f23fe000,0x00007fa1f24ff000)]
+  0x00007fa1ec039800 JavaThread "WebSocketWorker-24" [_thread_blocked, id=1850, stack(0x00007fa1f24ff000,0x00007fa1f2600000)]
+  0x00007fa1ec038000 JavaThread "WebSocketWorker-23" [_thread_blocked, id=1849, stack(0x00007fa1f29ff000,0x00007fa1f2b00000)]
+  0x00007fa1ec036000 JavaThread "connectionLostChecker-1" [_thread_blocked, id=1848, stack(0x00007fa1f2cff000,0x00007fa1f2e00000)
