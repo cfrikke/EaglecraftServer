@@ -1,0 +1,11 @@
+#AutoSaver v2 Configuration file
+#===============================
+
+#Do you want this plugin enabled or disabled upon start up? (enabled/disabled)
+status: enabled
+
+#On what interval would you like to save? (time in minutes)
+interval: 1
+
+#Console logging settings (enabled/disabled)
+log: enabled
