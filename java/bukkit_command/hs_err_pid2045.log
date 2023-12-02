@@ -1,0 +1,173 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007ff811b24b8e, pid=2045, tid=0x00007ff7b22fe640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_302-b07) (build 1.8.0_302-b07)
+# Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.2.0 (25.302-b07-jvmci-21.2-b08 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x9f4b8e]  ObjectMonitor::EnterI(Thread*)+0x20e
+#
+# Core dump written. Default location: /home/runner/eaglecraft-server-1-backup/java/bukkit_command/core or core.2045
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/oracle/graal/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007ff80c393800):  JavaThread "Server thread" [_thread_blocked, id=2101, stack(0x00007ff7b21fe000,0x00007ff7b22ff000)]
+
+siginfo: si_signo: 7 (SIGBUS), si_code: 2 (BUS_ADRERR), si_addr: 0x00007ff810a85100
+
+Registers:
+RAX=0x00007ff810a85100, RBX=0x00007ff80c393800, RCX=0x00007ff81266f6e9, RDX=0x0000000000000001
+RSP=0x00007ff7b22fcd90, RBP=0x00007ff7b22fce10, RSI=0x0000000000000081, RDI=0x00007ff80c394328
+R8 =0x0000000000000000, R9 =0x0000000000000080, R10=0x0000000000000000, R11=0x0000000000000286
+R12=0x00000000000003e8, R13=0x00007ff8122462cc, R14=0x0000000000000000, R15=0x00007ff7e0004d68
+RIP=0x00007ff811b24b8e, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000007
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ff7b22fcd90)
+0x00007ff7b22fcd90:   00007ff7e0004d80 00007ff7b22fcda0
+0x00007ff7b22fcda0:   0000000000000000 0000000000000bad
+0x00007ff7b22fcdb0:   00007ff80c393800 0000000000000000
+0x00007ff7b22fcdc0:   00007ff80c394300 0000000500000000
+0x00007ff7b22fcdd0:   00000000ffffffff 00007ff7ed97b6e0
+0x00007ff7b22fcde0:   00007ff7b22fce10 00007ff7e0004d68
+0x00007ff7b22fcdf0:   00007ff8122462cc 00007ff7e0004d80
+0x00007ff7b22fce00:   0000000000000000 00007ff80c393800
+0x00007ff7b22fce10:   00007ff7b22fcef0 00007ff811b251b9
+0x00007ff7b22fce20:   0000000000000000 00007ff80c394c00
+0x00007ff7b22fce30:   00000002b22fcf78 00007ff7e0004de0
+0x00007ff7b22fce40:   00007ff7b22fce00 00007ff80c393800
+0x00007ff7b22fce50:   0000000000000000 00007ff7b22fcf78
+0x00007ff7b22fce60:   00007ff800000005 00007ff80c393800
+0x00007ff7b22fce70:   00007ff7b22fce01 00007ff80c394a30
+0x00007ff7b22fce80:   00007ff7b22fce00 00007ff80c394018
+0x00007ff7b22fce90:   0000000000000000 0000000000000000
+0x00007ff7b22fcea0:   00007ff80c393800 00007ff7b22fcf48
+0x00007ff7b22fceb0:   00007ff7b22fcfb8 00007ff80c393800
+0x00007ff7b22fcec0:   00007ff7b22fcef0 00007ff80c393800
+0x00007ff7b22fced0:   00007ff7b22fcf48 00007ff7b8e0b047
+0x00007ff7b22fcee0:   00007ff7b22fcfb8 00007ff80c393800
+0x00007ff7b22fcef0:   00007ff7b22fcf30 00007ff8117d8e51
+0x00007ff7b22fcf00:   00007ff7b8d07b88 00007ff80c394018
+0x00007ff7b22fcf10:   0000000000000000 00000000000000c2
+0x00007ff7b22fcf20:   0000000000000000 00007ff7b8e0b047
+0x00007ff7b22fcf30:   00007ff7b22fcf98 00007ff7fd0282ef
+0x00007ff7b22fcf40:   00007ff7fd0282ad 0000000000000003
+0x00007ff7b22fcf50:   00000000f7e342b8 00007ff7b22fcf48
+0x00007ff7b22fcf60:   00007ff7b8e0b047 00007ff7b22fcfb8
+0x00007ff7b22fcf70:   00007ff7b8e0b0f0 0000000000000000
+0x00007ff7b22fcf80:   00007ff7b8e0b078 0000000000000000 
+
+Instructions: (pc=0x00007ff811b24b8e)
+0x00007ff811b24b6e:   0f 4f e0 49 8b 47 18 48 85 c0 0f 84 3c 02 00 00
+0x00007ff811b24b7e:   48 8b 05 0b 16 72 00 48 85 c0 74 08 48 8b 40 28
+0x00007ff811b24b8e:   48 83 00 01 f6 05 1f 4f 6f 00 01 0f 84 21 ff ff
+0x00007ff811b24b9e:   ff 8b 15 27 16 72 00 85 d2 0f 84 43 02 00 00 83 
+
+Register to memory mapping:
+
+RAX=0x00007ff810a85100 is an unknown value
+RBX=0x00007ff80c393800 is a thread
+RCX=0x00007ff81266f6e9: <offset 0xc6e9> in /nix/store/9bh3986bpragfjmr32gay8p95k91q4gy-glibc-2.33-47/lib/libpthread.so.0 at 0x00007ff812663000
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007ff7b22fcd90 is pointing into the stack for thread: 0x00007ff80c393800
+RBP=0x00007ff7b22fce10 is pointing into the stack for thread: 0x00007ff80c393800
+RSI=0x0000000000000081 is an unknown value
+RDI=0x00007ff80c394328 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000080 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000286 is an unknown value
+R12=0x00000000000003e8 is an unknown value
+R13=0x00007ff8122462cc: <offset 0x11162cc> in /nix/store/x26gyx3nb3kx580i4r9qg9q1iw45xbp9-graalvm8-ce/jre/lib/amd64/server/libjvm.so at 0x00007ff811130000
+R14=0x0000000000000000 is an unknown value
+R15=0x00007ff7e0004d68 is an unknown value
+
+
+Stack: [0x00007ff7b21fe000,0x00007ff7b22ff000],  sp=0x00007ff7b22fcd90,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9f4b8e]  ObjectMonitor::EnterI(Thread*)+0x20e
+V  [libjvm.so+0x9f51b9]  ObjectMonitor::enter(Thread*)+0x1f9
+V  [libjvm.so+0x6a8e51]  InterpreterRuntime::monitorenter(JavaThread*, BasicObjectLock*)+0x51
+j  java.lang.UNIXProcess$ProcessPipeInputStream.close()V+7
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.close([Ljava/io/Closeable;)V+19
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.exec([Ljava/lang/String;)Ljava/lang/String;+159
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.exec(Ljava/lang/String;)Ljava/lang/String;+39
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.stty(Ljava/lang/String;)Ljava/lang/String;+39
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.get(Ljava/lang/String;)Ljava/lang/String;+2
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.getProperty(Ljava/lang/String;)I+46
+j  org.bukkit.craftbukkit.libs.jline.UnixTerminal.getWidth()I+6
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawBuffer(I)V+202
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawBuffer()V+2
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawLine()V+67
+j  org.bukkit.craftbukkit.v1_5_R3.util.TerminalConsoleHandler.flush()V+30
+j  java.util.logging.ConsoleHandler.publish(Ljava/util/logging/LogRecord;)V+6
+j  java.util.logging.Logger.log(Ljava/util/logging/LogRecord;)V+87
+j  org.bukkit.plugin.PluginLogger.log(Ljava/util/logging/LogRecord;)V+30
+j  java.util.logging.Logger.doLog(Ljava/util/logging/LogRecord;)V+46
+j  java.util.logging.Logger.log(Ljava/util/logging/Level;Ljava/lang/String;)V+21
+j  java.util.logging.Logger.info(Ljava/lang/String;)V+5
+j  com.metagamingnetwork.autosaver.autosaver$1.run()V+64
+J 4055 JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.r()V (417 bytes) @ 0x00007ff7fd956bb4 [0x00007ff7fd955a80+0x1134]
+J 4104 JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.q()V (326 bytes) @ 0x00007ff7fdab0774 [0x00007ff7fdab0620+0x154]
+J 4005% JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.run()V (674 bytes) @ 0x00007ff7fda069ac [0x00007ff7fda06720+0x28c]
+j  net.minecraft.server.v1_5_R3.ThreadServerApplication.run()V+4
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x6b7b5d]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0xc5d
+V  [libjvm.so+0x6b54b3]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x263
+V  [libjvm.so+0x6b5a7f]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Thread*)+0x4f
+V  [libjvm.so+0x755c6c]  thread_entry(JavaThread*, Thread*)+0x6c
+V  [libjvm.so+0xb8613b]  JavaThread::thread_main_inner()+0xdb
+V  [libjvm.so+0xb86409]  JavaThread::run()+0x299
+V  [libjvm.so+0xa13d02]  java_start(Thread*)+0x102
+C  [libpthread.so.0+0x8d3e]  start_thread+0xce
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.UNIXProcess$ProcessPipeInputStream.close()V+7
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.close([Ljava/io/Closeable;)V+19
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.exec([Ljava/lang/String;)Ljava/lang/String;+159
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.exec(Ljava/lang/String;)Ljava/lang/String;+39
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.stty(Ljava/lang/String;)Ljava/lang/String;+39
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.get(Ljava/lang/String;)Ljava/lang/String;+2
+j  org.bukkit.craftbukkit.libs.jline.internal.TerminalLineSettings.getProperty(Ljava/lang/String;)I+46
+j  org.bukkit.craftbukkit.libs.jline.UnixTerminal.getWidth()I+6
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawBuffer(I)V+202
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawBuffer()V+2
+j  org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.drawLine()V+67
+j  org.bukkit.craftbukkit.v1_5_R3.util.TerminalConsoleHandler.flush()V+30
+j  java.util.logging.ConsoleHandler.publish(Ljava/util/logging/LogRecord;)V+6
+j  java.util.logging.Logger.log(Ljava/util/logging/LogRecord;)V+87
+j  org.bukkit.plugin.PluginLogger.log(Ljava/util/logging/LogRecord;)V+30
+j  java.util.logging.Logger.doLog(Ljava/util/logging/LogRecord;)V+46
+j  java.util.logging.Logger.log(Ljava/util/logging/Level;Ljava/lang/String;)V+21
+j  java.util.logging.Logger.info(Ljava/lang/String;)V+5
+j  com.metagamingnetwork.autosaver.autosaver$1.run()V+64
+J 4055 JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.r()V (417 bytes) @ 0x00007ff7fd956bb4 [0x00007ff7fd955a80+0x1134]
+J 4104 JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.q()V (326 bytes) @ 0x00007ff7fdab0774 [0x00007ff7fdab0620+0x154]
+J 4005% JVMCI-native net.minecraft.server.v1_5_R3.MinecraftServer.run()V (674 bytes) @ 0x00007ff7fda069ac [0x00007ff7fda06720+0x28c]
+j  net.minecraft.server.v1_5_R3.ThreadServerApplication.run()V+4
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007ff79c1e1800 JavaThread "process reaper" daemon [_thread_blocked, id=2278, stack(0x00007ff7ed944000,0x00007ff7ed97d000)]
+  0x00007ff79c1e1000 JavaThread "pool-1-thread-1" [_thread_blocked, id=2170, stack(0x00007ff78e8ff000,0x00007ff78ea00000)]
+  0x00007ff79c67b000 JavaThread "File IO Thread" [_thread_blocked, id=2169, stack(0x00007ff78cdff000,0x00007ff78cf00000)]
+  0x00007ff79c078000 JavaThread "Listen thread" [_thread_in_native, id=2117, stack(0x00007ff796cff000,0x00007ff796e00000)]
+  0x00007ff79c004800 JavaThread "Thread-5" daemon [_thread_in_native, id=2102, stack(0x00007ff7b20fd000,0x00007ff7b21fe000)]
+  0x00007ff80c00a000 JavaThread "DestroyJavaVM" [_thread_blocked, id=2048, stack(0x00007ff810eef000,0x00007ff810fef000)]
+=>0x00007ff80c393800 JavaThread "Server thread" [_thread_blocked, id=2101, stack(0x00007ff7b21fe000,0x00007ff7b22ff000)]
+  0x00007ff80c392800 JavaThread "Thread-4" daemon [_thread_blocked, id=2100, stack(0x00007ff7b22ff000,0x00007ff7b2400000)]
+  0x00007ff80c30c800 JavaThread "Snooper Timer" daemon [_thread_blocked, id=2082, stack(0x00007ff7ba4ff000,0x00007ff7ba600000)]
+  0x00007ff7bc039800 JavaThread "Libgraal MBean Registration" daemon [_thread_blocked, id=2075, stack(0x00007ff7c38ff000,0x00007ff7c3a00000)]
+  0x00007ff80c1c8000 JavaThread "CrashLoopDetector" daemon [_thread_blocked, id=2071, stack(0x00007ff7ec4cd000,0x00007ff7ec5ce000)]
+  0x00007ff80c174000 JavaThread "Service Thread" daemon [_thread_blocked, id=2067, stack(0x00007ff7edc11000,0x00007ff7edd12000)]
+  0x00007ff80c167800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=2065, stack(0x00007ff7edd13000,0x00007ff7edf13000)]
+  0x00007ff80c164800 JavaThread "JVMCI-native CompilerThread0" daemon [_thread_blocked, id=2063, stack(0x00007ff7edf14000,0x00007ff7ee114000)]
+  0x00007ff80c161800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2061, stack(0x00007ff7ee11a000,0x00007ff7ee21b000)]
+  0x00007ff80c12f000 JavaThread "Finalizer" daemon [_thread_blocked, id=2059, stack(0x00007ff7ee501000,0x00007ff7ee602000)

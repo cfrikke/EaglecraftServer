@@ -1,0 +1,6 @@
+# Updated 12/1/23 10:33 PM by Minecraft 1.5.2
+# victim name | ban date | banned by | banned until | reason
+
+stupidteawoman|2023-05-22 14:36:01 +0000|(Unknown)|Forever|Banned by an operator.
+bob|2023-05-22 14:43:51 +0000|(Unknown)|Forever|Banned by an operator.
+potatomanthetrue|2023-05-29 01:59:49 +0000|(Unknown)|Forever|Banned by an operator.
